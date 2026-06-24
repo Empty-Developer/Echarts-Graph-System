@@ -1,5 +1,9 @@
 # ECharts Graph System
 
+<p align="center">
+  <img src="./readme.image/img.png" alt="UpSpoke Logo">
+</p>
+
 Кастомный интерактивный график на [Apache ECharts](https://echarts.apache.org/). Визуал и поведение графика полностью воспроизводят референс из видео.
 
 ## Что сделано
