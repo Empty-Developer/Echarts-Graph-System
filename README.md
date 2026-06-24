@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ECharts Graph System
 
-## Getting Started
+Кастомный интерактивный график на [Apache ECharts](https://echarts.apache.org/). Визуал и поведение графика полностью воспроизводят референс из видео.
 
-First, run the development server:
+## Что сделано
+
+- Кастомный график с настроенными осями, слоями и тултипом
+- Ховеры работают точно по сценарию: в зависимости от области экрана
+- Стили подогнаны под дизайн видео
+
+## Стек
+
+- **ECharts** — основная библиотека для графика
+- TypeScript — типы данных описаны в `type/chartData.ts`
+
+## Как запустить
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Про данные
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+График из ТЗ не совпадал с реальными цифрами из видео — при подстановке точных данных пропорции ломались. Пришлось вручную подбирать визуальные значения, чтобы картинка совпала с референсом.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+В продакшене эти заглушки заменяются реальными данными с бэка.
 
-## Learn More
+## Этапы работы
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Выбор библиотеки** - Мне нужно было узнать, что за библиотека используется для написания такого графика, и я откинул ей скрин графика, чтобы она дала мне точный вариант. После чего я попросил её скинуть документацию на график и узнать, как строятся такие графики.
+2. **Разработка** - Я написал структуру(эрархию) проекта дал нейросети понять как выглядит проект и попросил по данным которые я написал в `type/chartData.ts` спроектировать графы.
+3. **Стилизация(Маштобируемость)** - Сверил с масштабируемостью проекта и подогнал стили из видео в графы.
+4. **Проверка** - Создал костыли, чтобы графы были видны как на видео (в проде бы удалил их), исправил функционал и добавил точный сценарий из видео.
