@@ -22,7 +22,7 @@ export default function CustomChart() {
   };
 
   return (
-    <div className="w-full h-[320px] overflow-hidden border-2 border-[#D5CACB] bg-[#F9EBEA] cursor-pointer [&_canvas]:cursor-pointer">
+    <div className="w-full h-[320px] border-2 border-[#D5CACB] cursor-pointer [&_canvas]:cursor-pointer">
       <ReactECharts 
         option={option} 
         style={{ height: '100%', width: '100%' }} 

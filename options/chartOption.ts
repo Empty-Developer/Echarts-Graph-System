@@ -14,7 +14,7 @@ export const getChartOption = (data: ChartData) => {
   );
 
   return {
-    backgroundColor: '#F9EBEA', 
+    backgroundColor: 'transparent', 
     animationDurationUpdate: 0,
 
     tooltip: {
